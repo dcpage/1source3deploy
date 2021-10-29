@@ -9,8 +9,6 @@ phases:
       - REPOSITORY_URI=868043926748.dkr.ecr.eu-west-2.amazonaws.com/ecstest
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
-      - echo Removing global.json file
-      - rm ./global.json -f
   build:
     commands:
       - echo Build started on `date`

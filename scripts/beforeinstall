@@ -1,0 +1,4 @@
+if [ -d /var/www/ ]; then
+    rm -rf /var/www/
+fi
+mkdir -vp /var/www/
